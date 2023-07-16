@@ -1,0 +1,19 @@
+1) Getting a list of items: 
+curl --insecure https://localhost:5001/api/glossary
+
+
+2) Getting a single item:
+Command: curl --insecure https://localhost:5001/api/glossary/MVC
+
+3) Creating an item:
+Command: curl --insecure -X POST -d "{\"term\": \"MFA\", \"definition\":\"An 
+authentication process.\"}" -H "ContentType:application/json" 
+https://localhost:5001/api/glossary 
+
+4)Update Item:
+Command: curl --insecure -X PUT -d "{\"term\": \"MVC\", 
+\"definition\":\"Modified record of Model View Controller.\"}" -H "ContentType:application/json" https://localhost:5001/api/glossary
+
+5) Delete Item: 
+Command: curl --insecure --request DELETE --url 
+https://localhost:5001/api/glossary/openid

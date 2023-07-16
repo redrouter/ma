@@ -1,0 +1,24 @@
+docker -–version
+
+docker pull rocker/verse
+
+docker images
+login in docker
+
+docker login --username=kbdocker2
+
+docker tag 8c3e4e2c3e kbdocker11/repo1:firsttry
+
+docker push kbdocker11/repo1:firsttry
+
+
+2nd method
+ cat > Dockerfile <<EOF
+ FROM busybox
+ CMD echo "Hello world! This is my first Docker image."
+ EOF
+
+docker build –t kbdocker11/repo2 .
+docker images
+
+docker push kbdocker11/repo2

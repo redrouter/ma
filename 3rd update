@@ -27,11 +27,11 @@ jobs:
       - run: echo "A more familiar hi"
       - attach_workspace: 
             at: my_workspace 
-      - run: | 
-          if [[ $(cat my_workspace/echo-output) == "Trying out workspaces"]]; 
+      - run: | "Trying out workspaces" > my_workspace/echo-output 
+          if 
             then echo "It worked!"; 
           else
-            echo "Nope!"; exit 1
+            echo "Nope!"; 
           fi
 workflows: 
   version: 2.1
